@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <link rel="stylesheet" href="css/beautify.css">
+    </head>
+    <body class="text">
+        <div>
+            {{message}}
+            <br>
+
+        </div>
+        <table class="right">
+  <tr>
+    <th>Genre</th>
+    <th>Average Rating</th>
+  </tr>
+  {{#each genre}}
+  <tr>
+    <td>{{this.name}}</td>
+    <td>{{this.rating}}</td>
+  </tr>
+  {{/each}}
+</table>
+        <table>
+  <tr>
+    <th>Movie</th>
+    <th>Rating</th>
+    <th>Genre</th>
+  </tr>
+  {{#each movie}}
+  <tr>
+    <td>{{this.name}}</td>
+    <td>{{this.rating}}</td>
+    <td>{{this.genre}}</td>
+  </tr>
+  {{/each}}
+</table>
+
+
+
+</body>
+</html>

@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title> The Voting Page</title>
+        <link rel="stylesheet" href="css/beautify.css" >
+</head>
+
+<body>
+
+<div class="content">
+    <p id="box" class="options">
+      <h1>Tongue Twisters</h1> <br>
+      <form>
+        <input type="radio" name="letter" value="S">S<br>
+        <input type="radio" name="letter" value="P">P<br>
+        <input type="radio" name="letter" value="G">G <br>
+        <input type="radio" name="letter" value="D">D <br>
+      </form>
+
+    <button type="button" onclick="fetchRhyme()">Go</button>
+</div>
+
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
+<script type="text/javascript">
+function fetchRhyme() {
+
+    var letterValue = document.querySelector("input[name='letter']:checked").value;
+    console.log("Radio Value: " + letterValue)
+    var ajax_params = {
+        'url'     : "https://user.tjhsst.edu/2021spuli/voting_worker",
+        'type'    : "get",
+        'data'    : { 'letter' : letterValue },
+        'success' : respondRhyme
+    }
+
+    $.ajax( ajax_params )
+}
+function respondRhyme (responseText) {
+    console.log(responseText);
+    document.getElementById('box').innerHTML = responseText;
+}
+</script>
+
+</body>
+</html>

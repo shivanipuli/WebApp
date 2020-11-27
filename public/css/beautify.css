@@ -1,0 +1,51 @@
+.options{
+    font-size: 15px;
+  margin: 5px;
+  width: 200px;
+}
+.box{
+  font-size: 15px;
+  font-weight: normal;
+  text-align: center;
+  margin: 5px;
+  width: 50px;
+  height: 25px;
+  border: 1px solid black;
+}
+h1{
+    font-family: Georgia;
+    font-size: 30px;
+}
+.text{
+    top: 100px;
+    font-size: 20px;
+    font-family:Comic Sans MS;
+    clear: left;
+    float:left;
+    position: relative;
+}
+button{
+    font-size: 20px;
+    font: Georgia;
+    border-radius:3px;
+}
+h2{
+    font-size: 25px;
+    color:red;
+  font-family: Papyrus,fantasy;
+  float: center;
+  padding-top: 20px;
+  padding-left: 30px
+}
+table, th, td {
+  border: 1px solid black;
+  margin: 30px;
+}
+.right{
+    float: right;
+}
+th{
+    font-size:20px;
+    font-weight:bold;
+    background-color: #34234;
+}

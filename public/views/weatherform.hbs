@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-15">
+        <title> The Weather Form</title>
+        <link href="css/test.css" rel="stylesheet">
+        <!--<script type="text/javascript" src="js/submit.js" async></script>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js" async></script> -->
+    </head>
+    <nav class="nav-bar" role="navigation">
+        <div class="box"><a href="/2021spuli/getweather">Today's Weather</a></div>
+        <div class="box"><a href="/2021spuli/getweekly">Weekly Weather</a></div>
+        <div class="box"><a href="/2021spuli/weatherform">Find Weather</a></div>
+        <div class="box"><a href="/2021spuli/madlib">Mad Lib</a></div>
+        <br>
+    </nav>
+    <body>
+    <div class="main text">
+        <form id="weather_form" action="getweather" method="get">
+        <fieldset>
+            Latitude:
+            <input type="text" name="lat">
+            <br>
+            Longitude:
+            <input type="text" name="long">
+            <br>
+            <input type="radio" name="json">
+            JSON
+            <br>
+            <button type="submit" name="submit" onclick="submitForm()"> Submit </button>
+        </fieldset>
+        </form>
+    </div>
+    </body>
+</html>

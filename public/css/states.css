@@ -1,0 +1,31 @@
+.displayContainer_1 {
+    margin-left: 15%;
+    margin-right: 15%;
+    padding: 10;
+    width: 85%;
+}
+
+.displayContainer_1 svg path {
+    fill: #AAA;
+    transition: fill .4s ease-out;
+}
+
+
+.displayContainer_1 svg path:hover {
+    fill:#FFF;
+    stroke:black;
+    pointer-events:all;
+}
+#republican svg path:hover{
+    fill:#DDD;
+    color: red;
+}
+
+.democrat svg path:hover{
+    transition-duration: .4s;
+    fill: blue;
+}
+
+#swing{
+    fill: black
+}

@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <link rel="stylesheet" href="css/calendar.css">
+        <title>Calendar</title>
+    </head>
+    <body>
+    <!--<canvas id="myCanvas" class="lines" width="1000" height="700">
+    </canvas>-->
+    <nav class="nav-bar left" role="navigation">
+            Welcome {{user}}!
+    </nav>
+    <form action="logout" method="get" >
+        <button type="submit" class="navbut right" name="logout"> Logout</button>
+    </form>
+    <div id="response"></div>
+        <div class="text left">
+        <form id="addEvent" action="addEvent" method="get">
+        Event:
+        <input type="text" id="event" name="event"> <br>
+        Date:
+        <select id="month" name="month">
+                <option value="100"> January</option>
+                <option value="200"> February</option>
+                <option value="300"> March</option>
+                <option value="400"> April</option>
+                <option value="500"> May</option>
+                <option value="600"> June</option>
+                <option value="700"> July</option>
+                <option value="800"> August</option>
+                <option value="900"> September</option>
+                <option value="1000"> October</option>
+                <option value="1100"> November</option>
+                <option value="1200"> December</option>
+        </select>
+        <input type="number" id="day" name="day" min="1" max="31">
+        <button type="submit" name="submit"> Add Event</button>
+    </form>
+    </div>
+    <div class="header middle">
+        <h1 class="middle">{{month}} 2020</h1>
+        <button><a href={{prev}}> <canvas id="prev" width="30" height="50"> </canvas></a></button>
+        <button> <a href={{next}}> <canvas id="next" width="30" height="50"></a></button>
+    </div>
+  <table>
+  <tr>
+    <th>Sunday</th>
+    <th>Monday</th>
+    <th>Tuesday</th>
+    <th>Wednesday</th>
+    <th>Thursday</th>
+    <th>Friday</th>
+    <th>Saturday</th>
+  </tr>
+  {{#each dates as |week|}}
+  <tr>
+      {{#each week as |day|}}
+      <td>
+      <div class="number">
+          {{day.date}}
+      </div>
+      {{#each day.events}}
+      <li> {{this}}</ul>
+      {{/each}}
+      </td>
+      {{/each}}
+  </tr>
+  {{/each}}
+</table>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
+<script type="text/javascript" src="js/calendar.js"></script>
+</body>
+</html>

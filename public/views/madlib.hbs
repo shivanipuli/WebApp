@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title> Mad Lib Template</title>
+         <link rel="stylesheet" href="css/test.css">
+
+    </head>
+    <nav class="nav-bar" role="navigation">
+        <div class="box"><a href="/2021spuli/getweather">Today's Weather</a></div>
+        <div class="box"><a href="/2021spuli/getweekly">Weekly Weather</a></div>
+        <div class="box"><a href="/2021spuli/weatherform">Find Weather</a></div>
+        <div class="box"><a href="/2021spuli/madlib">Mad Lib</a></div>
+        <br>
+    </nav>
+    <body>
+        <div class="main text">
+           <h2> Fill in the blanks! </h2>
+           <h3> use lowercase words</h3>
+        <form id="mad lib" class='paragraph' action="getMadLib" method="get">
+            Gender:
+            <br>
+            <input type='radio' name="gender" value="boy">
+              <label for="boy">Boy</label>
+            <br>
+              <input type='radio' name="gender" value="girl">
+              <label for="girl">Girl</label>
+            <br>
+            <br> Adverb:
+            <input type="text" name="adv">
+            <br> Verb:
+            <input type="text" name="v">
+            <br> Article of Clothing:
+            <input type="text" name="clothing">
+            <br> Bodypart:
+            <input type="text" name="bodypart">
+            <br> Noun:
+            <input type="text" name="noun2">
+            <br> Plural noun:
+            <input type="text" name="pnoun">
+            <br> Another bodypart:
+            <input type="text" name="bodypart2">
+            <br> Adjective with -ing:
+            <input type="text" name="adj2">
+            <br> Verb:
+            <input type="text" name="v2">
+            <button type="submit" name="submit" onclick=submitForm();> Submit </button>
+        </form>
+        </div>
+    </body>
+</html>

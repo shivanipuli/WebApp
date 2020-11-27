@@ -1,0 +1,94 @@
+h1{
+    color: purple;
+    font-family: Georgia;
+    text-align: center;
+}
+paragraph{
+    font-size: 20px;
+    font-family: Arial;
+}
+.nav-bar{
+    position: fixed;
+    top:20px;
+    background-color: yellow;
+    width: 100%;
+    font-size: 30px;
+    text-align: center;
+    font-family: impact;
+}
+a{
+    text-decoration: none;
+    color: black;
+}
+h3{
+    font-style: italic;
+}
+.madlib{
+    color: black;
+}
+.right{
+    float:right;
+    right:30px;
+    margin: 20px;
+}
+.center{
+    background-color: white;
+    fill: #BBB;
+    border: 2px solid black;
+    position: fixed;
+    font-size: 30px;
+    text-align: center;
+    font-family: impact;
+    top: 35%;
+    left:45%;
+    border-spacing: 10px;
+}
+.text{
+    top: 100px;
+    font-size: 15px;
+    font-family:Comic Sans MS;
+    clear: left;
+    float:left;
+    position: relative;
+}
+.box{
+  font-size: 25px;
+  font-family: Papyrus,fantasy;
+  font-weight: normal;
+  text-align: center;
+  position: relative;
+  float: left;
+  background-color: orange;
+  margin: 15px;
+  width: 200px;
+  border: 2px solid black;
+}
+.republican{
+    background-color: red;
+    color:white;
+}
+.democrat{
+    background-color: blue;
+    color:white;
+}
+button{
+    font-size: 20px;
+    font: Georgia;
+    border-radius:3px;
+}
+.time{
+    font-size:30px;
+    /*position: fixed;
+    right: 15px;
+    top: 15px;*/
+    outline-offset: 5px;
+}
+.answer{
+    background-color: yellow;
+    width: 500px;
+    font-size: 20px;
+    text-align: center;
+    position: relative;
+    margin:10px auto;
+    border: gray;
+}

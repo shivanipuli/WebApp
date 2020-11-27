@@ -1,0 +1,78 @@
+canvas{
+    border: none;
+}
+.password{
+    type: password;
+}
+.number{
+    font-family: fantasy;
+    font-size: 30px;
+    border:black 10px;
+    border-radius: 10px;
+    vertical-align: top;
+}
+#download{
+  position: fixed;
+  top: 10px;
+}
+.navbut{
+    font-size: 20px;
+    text-decoration: bold;
+    margin: 20px;
+}
+.nav-bar{
+    /*position: fixed;*/
+    top:20px;
+    float:left;
+    background-color: yellow;
+    padding-left: 10px;
+    padding-right: 10px;
+    /*width: 30%;*/
+    font-size: 30px;
+    text-align: center;
+    font-family: impact;
+}
+.text{
+    top: 35px;
+    font-size: 15px;
+    font-family:Comic Sans MS;
+    clear: left;
+    float:left;
+    position: relative;
+}
+a{
+    text-decoration: none;
+    color:black;
+}
+.lines{
+    border:1px solid #000000
+}
+table{
+    width: 90%;
+    height: 90%;
+}
+table, th, td {
+  margin: 30px;
+}
+th,td{
+    border: 1px solid black;
+}
+th{
+    font-size:20px;
+    font-weight:bold;
+    background-color: #34234;
+}
+td{
+    padding:5px;
+    width:12%;
+    word-wrap: normal;
+}
+.middle{
+    text-align:center;
+}
+.right{
+    float:right;
+}
+.left{
+    float:left;
+}

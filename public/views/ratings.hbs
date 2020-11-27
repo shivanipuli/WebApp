@@ -1,0 +1,110 @@
+<html>
+
+<head>
+    <title> Ratings </title>
+    <link rel="stylesheet" href="css/beautify.css">
+</head>
+
+<body>
+    <div>
+        <form id="form">
+            <h2>Rate a movie</h2>
+            <select id="movie" class="options" name="movie">
+                <option value="Cinderella"> Cinderella</option>
+                <option value "Frozen"> Frozen</option>
+                <option value="Tangled"> Tangled</option>
+                <option value="Casablanca"> Casablanca</option>
+                <option value="Central Intelligence"> Central Intelligence</option>
+                <option value="Sinister"> Sinister</option>
+                <option value="Sinister 2"> Sinister 2</option>
+                <option value="Notebook"> Notebook</option>
+                <option value="Mission Impossible"> Mission Impossible</option>
+                <option value="Love Actually"> Love Actually</option>
+                <option value="Jason Bourne"> Jason Bourne</option>
+                <option value="Die Hard"> Die Hard</option>
+                <option value="Conjuring"> Conjuring</option>
+                <option value="Chuckie"> Chuckie</option>
+            </select>
+            <input type="number" class="box" id="rate" name="rate" min="1" max="5">
+        </form>
+        <button type="button" id="button"> Submit</button>
+    </div>
+    <div>
+        I bet that
+        <select id="genre" class="options">
+            <option value="Action"> Action</option>
+            <option value "Romance"> Romance</option>
+            <option value="Disney"> Disney</option>
+            <option value="Horror"> Horror</option>
+        </select> has the highest rating
+        <button type="button" id="bet"> Make Bet</button>
+    </div>
+    <div>
+        <button type="button" id="hide"> Hide Tables</button>
+        <button type="button" id="show"> Display Tables</button>
+    </div>
+    <div id="tables" class="text">
+    </div>
+
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
+    <script type="text/javascript">
+        document.getElementById("button").onclick = function() {
+            console.log("adding Rating")
+            $.ajax({
+                url: "ratings",
+                type: "get",
+                data: $('#form').serialize(),
+                success: function(response) {
+                    r = document.getElementById("tables");
+                    r.innerHTML = response;
+                },
+                error: function(stat, err) {
+                    r = document.getElementById("tables");
+                    r.innerHTML = 'something went wrong!';
+                }
+            });
+        }
+        document.getElementById("hide").onclick = function() {
+            //document.getElementById("message").innerHTML="";
+            document.getElementById("tables").innerHTML = "Tables are hidden";
+        }
+        document.getElementById("show").onclick = function() {
+            $.ajax({
+                url: "tables",
+                type: "get",
+                data: $('#form').serialize(),
+                success: function(response) {
+                    document.getElementById("tables").innerHTML = response;
+                },
+                error: function(stat, err) {
+                    r = document.getElementById("tables");
+                    r.innerHTML = 'something went wrong!';
+                }
+            });
+        }
+        document.getElementById("bet").onclick = function() {
+            if (document.getElementById("tables").innerHTML == ("Tables are hidden")) {
+                $.ajax({
+                    url: "bet",
+                    type: "get",
+                    data: "genre=" + document.getElementById("genre").value,
+                    success: function(response) {
+                        console.log(genre = ' + document.getElementById("genre").value"');
+                        r = document.getElementById("tables");
+                        r.innerHTML = response;
+                    },
+                    error: function(stat, err) {
+                        r = document.getElementById("tables");
+                        r.innerHTML = 'something went wrong!';
+                    }
+                });
+            } else {
+                document.getElementById("tables").innerHTML = "Tables must first be hidden"
+            }
+
+        }
+    </script>
+</body>
+
+</html>
